@@ -5,7 +5,10 @@ describe GetLottery do
     expect(GetLottery::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it '.run' do
+    prizes = ['A', 'B', 'C']
+    probability = [0, 0, 100]
+    res = GetLottery.run(prizes, probability)
+    expect(res).to eql 'C'
   end
 end
