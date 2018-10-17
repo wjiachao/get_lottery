@@ -20,10 +20,20 @@ Or install it yourself as:
 
     $ gem install get_lottery
 
-## Usage
+## How to use get_lottery in general
 
-TODO: Write usage instructions here
 
+```ruby
+require 'get_lottery'
+prizes = ['一等奖', '二等奖', '三等奖']
+
+probabilities = [20,50,30] 
+#  Refers 20%,50%,30%
+
+GetLottery.run(prizes, probabilities) 
+# will return prize
+
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
